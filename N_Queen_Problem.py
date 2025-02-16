@@ -74,7 +74,8 @@ def user_place_queen(board, n, queens_placed):
 def main():
     """Main function to run the N-Queens game."""
     n = int(input("Enter the size of the board (N): "))
-    board = [[0 for _ in range(n)] for _ in range(n)]  # Initialize empty board
+    # Initialize empty board
+    board = [[0 for _ in range(n)] for _ in range(n)] 
     queens_placed = 0
     
     while True:
@@ -90,7 +91,8 @@ def main():
             else:
                 print(f"All {n} queens have already been placed. You cannot place more.")
         elif choice == "2":
-            if queens_placed == n:  # Check if all queens are placed
+            # Check if all queens are placed
+            if queens_placed == n:  
                 print("\nCurrent Board:")
                 print_board(board, n)
                 print("All queens are placed. Checking if the board is valid...")
@@ -109,7 +111,8 @@ def main():
             else:
                 print(f"Only {queens_placed} queens have been placed. Place all {n} queens to check validity.")
         elif choice == "3":
-            board = [[0 for _ in range(n)] for _ in range(n)]  # Reset the board
+            # Reset the board
+            board = [[0 for _ in range(n)] for _ in range(n)]  
             queens_placed = 0
             print("The board has been reset.")
         elif choice == "4":
